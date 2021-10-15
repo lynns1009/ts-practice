@@ -5,6 +5,6 @@ import WelcomePage from "./welcomePage";
 describe('the first test practice',()=>{
     it('should render text correct',()=>{
         const {getByText} = render(<WelcomePage />)
-        expect(getByText('This is a')).toBeInTheDocument();
+        expect(getByText('This is a test')).toBeInTheDocument();
     })
 });
