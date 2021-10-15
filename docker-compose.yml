@@ -1,9 +1,8 @@
 version: '3.7'
 
 services:
-
-  sample:
-    container_name: sample
+  spreadsheet:
+    container_name: spreadsheet
     build:
       context: .
       dockerfile: Dockerfile
