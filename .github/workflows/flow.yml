@@ -1,22 +1,22 @@
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 env:
   NODE_VERSION: '16.x'
   CI: false
 
-jobs: 
+jobs:
   build-and-deploy:
-    name: "Build and Deploy"
-    runs-on: [ self-hosted, windows, X64 ]
+    name: 'Build and Deploy'
+    runs-on: [self-hosted, windows, X64]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Use Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ env.NODE_VERSION }}     
+          node-version: ${{ env.NODE_VERSION }}
       - name: Install Yarn
         run: npm install -g yarn
       - name: Run tests
@@ -26,3 +26,5 @@ jobs:
           yarn run test
           yarn run lint
           yarn run build
+      - name: Build Image
+        run: docker build Dockerfile .
