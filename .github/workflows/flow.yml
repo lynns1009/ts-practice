@@ -27,4 +27,4 @@ jobs:
           yarn run lint
           yarn run build
       - name: Build Image
-        run: docker build Dockerfile .
+        run: docker build -f Dockerfile .
