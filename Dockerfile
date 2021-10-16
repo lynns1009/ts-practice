@@ -11,7 +11,6 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json ./
 COPY package-lock.json ./
 RUN npm install
-RUN npm test
 
 # add app
 COPY . ./
