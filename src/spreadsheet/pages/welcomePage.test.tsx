@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import React from "react";
-import WelcomePage from "./welcomePage";
+import WelcomePage from "./WelcomePage";
 
 describe('the first test practice',()=>{
     it('should render text correct',()=>{
