@@ -3,7 +3,6 @@ $bold: "Biennale-Bold";
 .header {
   position: relative;
   height: 100px;
-  overflow: hidden;
   color: white;
   padding: 30px 30px;
   display: flex;
@@ -14,5 +13,11 @@ $bold: "Biennale-Bold";
     font-size: 36px;
     color: white;
     text-decoration: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobileDevice {
+    display: none;
   }
 }

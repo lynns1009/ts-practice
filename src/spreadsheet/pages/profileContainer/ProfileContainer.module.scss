@@ -1,0 +1,12 @@
+.profile {
+  width: 100% !important;
+  background-color: white;
+  height: 100% !important;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .profile {
+    width: 95% !important;
+  }
+}
