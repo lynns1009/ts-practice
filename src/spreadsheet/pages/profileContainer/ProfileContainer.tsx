@@ -1,12 +1,19 @@
 import React from "react";
-import { Container } from '@material-ui/core';
+import { Grid } from '@mui/material';
 import styles from './ProfileContainer.module.scss';
 
-const ProfileContainer :React.FC =()=>{
+const ProfileContainer: React.FC = () => {
     return (
-            <Container className={styles.profile}>
-                <div >this is a test</div>
-            </Container>
+        <Grid container
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            className={styles.profile}
+        >
+            <Grid item xs={11} md={11}>
+                Hello world
+            </Grid>
+        </Grid>
     );
 };
 
