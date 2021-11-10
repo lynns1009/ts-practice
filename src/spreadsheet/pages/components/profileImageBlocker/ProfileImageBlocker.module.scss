@@ -1,0 +1,33 @@
+$largeProfilePictureSize: 150px;
+$smallProfilePictureSize: 100px;
+
+.profilePic {
+  width: $largeProfilePictureSize;
+  height: $largeProfilePictureSize;
+  border-radius: 50%;
+  margin-top: calc($largeProfilePictureSize/(-2));
+  position: absolute;
+  top: calc($largeProfilePictureSize/2);
+  left: calc((100% - $largeProfilePictureSize) / 2);
+}
+
+.profileBlock {
+  width: 100%;
+  height: $largeProfilePictureSize;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .profilePic {
+    width: $smallProfilePictureSize;
+    height: $smallProfilePictureSize;
+    border-radius: 50%;
+    top: calc($smallProfilePictureSize/(2));
+    margin-top: -75px;
+    left: calc((100% - $smallProfilePictureSize) / 2);
+  }
+
+  .profileBlock {
+    height: $smallProfilePictureSize;
+  }
+}

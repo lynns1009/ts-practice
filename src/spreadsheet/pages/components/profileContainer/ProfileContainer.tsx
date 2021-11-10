@@ -10,8 +10,8 @@ const ProfileContainer: React.FC = () => {
             alignItems="center"
             className={styles.profile}
         >
-            <Grid item xs={11} md={11}>
-                Hello world
+            <Grid item xs={10} md={10}>
+                <Grid item xs={5} md={5} height={300}> </Grid>
             </Grid>
         </Grid>
     );
