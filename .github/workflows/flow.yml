@@ -28,10 +28,11 @@ jobs:
       #     yarn run lint
       #     yarn run build
       - name: Get github sha
+        id: test1
         run: |
-          echo "::set-output name=test::1243"
+          echo "::set-output name=action_fruit::strawberry"
         env:
-          TEST: $test
+          TEST: $action_fruit
       - name: Print Test_id
         run: |
-          echo "This is the test ${{ env.test }}"
+          echo "This is the ${{ steps.test1.outputs.action_fruit }}"
