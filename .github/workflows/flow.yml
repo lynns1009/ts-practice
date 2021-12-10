@@ -30,7 +30,7 @@ jobs:
       - name: Get github sha
         id: test1
         run: |
-          echo "::set-output name=action_fruit::${GITHUB_SHA::7}"
+          echo "::set-output name=action_fruit::$(git rev-parse --short "$GITHUB_SHA")"
         env:
           TEST: $action_fruit
       - name: Print Test_id
