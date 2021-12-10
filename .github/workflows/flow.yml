@@ -32,4 +32,4 @@ jobs:
           echo "action_state=yellow" >> $GITHUB_ENV
       - name: Print Test_id
         run: |
-          echo "This is the test ${{ env.action_state }}"
+          echo "This is the test ${{ env.action_state }}" >> $GITHUB_ENV
