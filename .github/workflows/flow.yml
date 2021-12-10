@@ -36,3 +36,6 @@ jobs:
       - name: Print Test_id
         run: |
           echo "This is the ${{ steps.test1.outputs.action_fruit }}"
+      - name: Print gitsha
+        run: |
+          echo "This is the $GITHUB_SHA"
