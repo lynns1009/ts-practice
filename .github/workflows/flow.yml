@@ -2,10 +2,10 @@ on:
   push:
     branches: [master]
 
-env:
-  NODE_VERSION: "16.x"
-  CI: true
-  test: "test"
+# env:
+#   NODE_VERSION: "16.x"
+#   CI: true
+#   test: "test"
 
 jobs:
   build-and-deploy:
@@ -14,10 +14,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ env.NODE_VERSION }}
+      # - name: Use Node.js ${{ env.NODE_VERSION }}
+      #   uses: actions/setup-node@v2
+      #   with:
+      #     node-version: ${{ env.NODE_VERSION }}
       # - name: Install Yarn
       #   run: npm install -g yarn
       # - name: Run tests
