@@ -41,4 +41,4 @@ jobs:
           echo "This is the $GITHUB_SHA"
       - name: Print gitsha
         run: |
-          echo ${{ GITHUB_SHA::7}}
+          echo ${{ $GITHUB_SHA::7}}
