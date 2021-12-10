@@ -27,8 +27,6 @@ jobs:
       #     yarn run lint
       #     yarn run build
       - name: Get github sha
-        run: echo "::set-output name=test::${GITHUB_SHA::7}"
-        env:
-          TEST_ID: $test
+        run: echo "test=${GITHUB_SHA::7}" >> $GITHUB_ENV
       - name: Print Test_id
-        run: echo "This is the test $TEST_ID"
+        run: echo "This is the test ${{ env.test }}"
