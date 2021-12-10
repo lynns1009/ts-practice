@@ -28,6 +28,8 @@ jobs:
       #     yarn run lint
       #     yarn run build
       - name: Get github sha
-        run: echo "test=blah" >> $GITHUB_ENV
+        run: |
+          echo "action_state=yellow" >> $GITHUB_ENV
       - name: Print Test_id
-        run: echo "This is the test ${{ env.test }}"
+        run: |
+          echo "This is the test ${{ env.action_state }}"
