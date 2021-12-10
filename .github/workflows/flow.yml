@@ -3,12 +3,12 @@ on:
     branches: [master]
 
 env:
-  NODE_VERSION: '16.x'
+  NODE_VERSION: "16.x"
   CI: true
 
 jobs:
   build-and-deploy:
-    name: 'Build and Deploy'
+    name: "Build and Deploy"
     runs-on: [self-hosted, windows, X64]
     steps:
       - name: Checkout repository
@@ -17,14 +17,18 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ env.NODE_VERSION }}
-      - name: Install Yarn
-        run: npm install -g yarn
-      - name: Run tests
-        run: |
-          # Build and test the project, then 
-          yarn install
-          yarn run test
-          yarn run lint
-          yarn run build
-      - name: Build Image
-        run: docker build -f Dockerfile .
+      # - name: Install Yarn
+      #   run: npm install -g yarn
+      # - name: Run tests
+      #   run: |
+      #     # Build and test the project, then
+      #     yarn install
+      #     yarn run test
+      #     yarn run lint
+      #     yarn run build
+      - name: Get github sha
+        run: echo "::set-output name=test::${GITHUB_SHA::7}"
+        env:
+          TEST_ID: $test
+      - name: Print Test_id
+        run: echo "This is the test $TEST_ID"
