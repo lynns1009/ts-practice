@@ -39,3 +39,6 @@ jobs:
       - name: Print gitsha
         run: |
           echo "This is the $GITHUB_SHA"
+      - name: Print gitsha
+        run: |
+          echo "This is the $GITHUB_REF"
