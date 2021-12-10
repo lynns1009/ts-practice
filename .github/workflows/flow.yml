@@ -5,6 +5,7 @@ on:
 env:
   NODE_VERSION: "16.x"
   CI: true
+  test: "test"
 
 jobs:
   build-and-deploy:
