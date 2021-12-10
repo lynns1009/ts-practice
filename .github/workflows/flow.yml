@@ -29,7 +29,9 @@ jobs:
       #     yarn run build
       - name: Get github sha
         run: |
-          echo "action_state=yellow" >> $GITHUB_ENV
+          echo "::set-output name=test::1243"
+        env:
+          TEST: $test
       - name: Print Test_id
         run: |
-          echo "This is the test ${{ env.action_state }}"
+          echo "This is the test ${{ env.test }}"
