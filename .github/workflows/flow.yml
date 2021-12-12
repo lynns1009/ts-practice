@@ -1,6 +1,7 @@
 on:
   push:
-    branches: [master, branches]
+    branches:
+      - "*"
 
 # env:
 #   NODE_VERSION: "16.x"
