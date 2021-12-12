@@ -27,18 +27,6 @@ jobs:
       #     yarn run test
       #     yarn run lint
       #     yarn run build
-      - name: Get github sha
-        id: test1
-        run: |
-          echo "::set-output name=action_fruit::$GITHUB_SHA"
-        env:
-          TEST: $action_fruit
-      - name: Print Test_id
-        run: |
-          echo "This is the ${{ steps.test1.outputs.action_fruit }}"
-      - name: Print gitsha
-        run: |
-          echo $GITHUB_SHA
       - name: Set outputs
         id: vars
         run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
